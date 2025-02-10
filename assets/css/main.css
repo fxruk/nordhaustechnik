@@ -2152,6 +2152,15 @@ body.is-preload #wrapper {
 	z-index: 1;
 }
 
+#home header img {
+	width: 200px;
+	/* Oder eine andere gewünschte Breite */
+	height: auto;
+	/* Behält das Seitenverhältnis */
+	border-radius: 50%;
+	/* Falls du das Bild rund machen willst */
+}
+
 #main>.panel.intro .pic img {
 	position: relative;
 	display: block;
@@ -2248,8 +2257,8 @@ body.is-preload #wrapper {
 	}
 
 	#main>.panel.intro header {
-		padding: 25em;
-		width: 100%;
+		padding: 4em;
+		text-align: center;
 	}
 
 }
