@@ -162,6 +162,8 @@ textarea {
 
 /* Row */
 
+
+
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -2104,7 +2106,7 @@ body.is-preload #wrapper {
 @media screen and (max-width: 736px) {
 
 	#main>.panel {
-		
+
 		padding: 2em 1.5em 1.5em 1.5em;
 	}
 
@@ -2128,7 +2130,7 @@ body.is-preload #wrapper {
 }
 
 #main>.panel.intro .pic {
-	
+
 	text-decoration: none;
 	position: relative;
 	-moz-flex-grow: 0;
@@ -2155,14 +2157,15 @@ body.is-preload #wrapper {
 }
 
 
-#main > .panel.intro .pic img {
+#main>.panel.intro .pic img {
+	height: auto;
+
 	position: relative;
 	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 	-moz-object-fit: cover;
 	-webkit-object-fit: cover;
 	-ms-object-fit: cover;
