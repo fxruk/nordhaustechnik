@@ -2283,7 +2283,7 @@ body.is-preload #wrapper {
 	text-decoration: none;
 	/* Entfernt die Unterstreichung */
 	color: inherit;
-	color: rgba(255, 255, 255, 0.65);
+	color: black;
 	/* Behält die Standardfarbe oder erbt sie vom Eltern-Element */
 }
 
