@@ -1904,6 +1904,7 @@ ul.actions li:first-child {
 	text-align: center;
 	height: 4.25em;
 	cursor: default;
+	margin-top: -20px;
 }
 
 #nav a {
@@ -1998,6 +1999,7 @@ ul.actions li:first-child {
 
 	#nav a span {
 		display: none;
+
 	}
 
 }
