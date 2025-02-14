@@ -34,16 +34,6 @@
 </header>
 
 <style>
-	/* #header { */
-	/* background-color: #1d4195; */
-	/* Dunkelblau als Hintergrundfarbe */
-	/* color: white; */
-	/* Weißer Text */
-	/* text-align: center; */
-	/* Zentrierter Text */
-	/* padding: 50px 20px; */
-	/* Abstand innen für eine schöne Optik */
-	/* } */
 	#header {
 		background-color: #2A679D;
 		/* Farbton aus dem Bild */
@@ -80,6 +70,33 @@
 		margin-bottom: 15px;
 		margin-left: 40px;
 		margin-right: 40px;
+	}
+
+	/* Responsive Anpassungen für Handys */
+	@media screen and (max-width: 768px) {
+		#header {
+			padding: 30px 15px;
+			/* Weniger Padding auf kleinen Bildschirmen */
+		}
+
+		.welcome-text {
+			max-width: 90%;
+			/* Fast volle Breite auf Mobilgeräten */
+			padding: 0 15px;
+			/* Weniger Innenabstand */
+		}
+
+		h1 {
+			font-size: 1.5em;
+			/* Kleinere Überschrift */
+		}
+
+		p {
+			font-size: 0.9em;
+			/* Kleinere Schrift für Mobilgeräte */
+			margin-left: 10px;
+			margin-right: 10px;
+		}
 	}
 </style>
 
