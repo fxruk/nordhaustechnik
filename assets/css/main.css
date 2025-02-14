@@ -2271,6 +2271,41 @@ body.is-preload #wrapper {
 
 }
 
+/* Abover Footer */
+
+#Above\ footer {
+	text-align: center;
+	padding: 2em 0 0 0;
+	/* Zentriert den Text */
+}
+
+.copyright a {
+	text-decoration: none;
+	/* Entfernt die Unterstreichung */
+	color: inherit;
+	color: rgba(255, 255, 255, 0.65);
+	/* Behält die Standardfarbe oder erbt sie vom Eltern-Element */
+}
+
+.copyright a[href^="tel:"] {
+	color: blue;
+	/* Telefon-Link bleibt blau */
+	text-decoration: underline;
+	/* Optional: Kann unterstrichen bleiben */
+}
+
+.copyright {
+	list-style: none;
+	/* Entfernt die Aufzählungspunkte */
+	padding: 0;
+	/* Entfernt den linken Abstand */
+}
+
+.copyright li {
+	margin-bottom: 5px;
+	/* Fügt etwas Abstand zwischen den Zeilen hinzu */
+}
+
 /* Footer */
 
 #footer {
