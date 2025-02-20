@@ -2327,7 +2327,7 @@ body.is-preload #wrapper {
 #footer {
 	color: rgba(255, 255, 255, 0.45);
 	text-align: center;
-	padding-top: 1em;
+	padding-top: 0.8em;
 	font-size: 0.75em;
 }
 
