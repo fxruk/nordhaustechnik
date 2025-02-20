@@ -2067,7 +2067,7 @@ body.is-preload #wrapper {
 @media screen and (max-width: 736px) {
 
 	#wrapper {
-		padding: 1em 0;
+
 		max-width: calc(100% - 2em);
 	}
 
