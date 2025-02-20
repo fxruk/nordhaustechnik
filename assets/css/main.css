@@ -1659,7 +1659,7 @@ article:last-child {
 }
 
 header {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1em 0;
 }
 
 header>p {
@@ -1904,7 +1904,8 @@ ul.actions li:first-child {
 	text-align: center;
 	height: 4.25em;
 	cursor: default;
-	margin-top: -20px;
+	margin-top: -10px;
+	margin-bottom: 10px;
 }
 
 #nav a {
@@ -2084,6 +2085,8 @@ body.is-preload #wrapper {
 /* Main */
 
 #main {
+	margin-top: 0;
+	margin-bottom: 0;
 	position: relative;
 	overflow: hidden;
 	width: 100%;
@@ -2324,7 +2327,7 @@ body.is-preload #wrapper {
 #footer {
 	color: rgba(255, 255, 255, 0.45);
 	text-align: center;
-	padding: 2em 0 0 0;
+	padding-top: 1em;
 	font-size: 0.75em;
 }
 
