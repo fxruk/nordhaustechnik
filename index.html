@@ -1,328 +1,427 @@
-<!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
+<html lang="de">
 <head>
-	<title>Astral by HTML5 UP</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nord Haustechnik & Gala Bau</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('http://static.photos/construction/1200x630/1');
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .gallery-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .contact-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
 </head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-gray-800">Nord Haustechnik</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#work" class="text-gray-600 hover:text-blue-600 font-medium">Arbeiten</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Kontakt</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Arbeiten</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Kontakt</a>
+            </div>
+        </div>
+    </nav>
 
-<header id="header">
-	<div>
-		<h1>Willkommen bei Nord Haustechnik</h1>
-		<h1>& Gala Bau</h1>
-		<p>
-			Ihr zuverlässiger Partner für hochwertige Handwerksleistungen!
-			Ob Renovierung, Sanierung oder Neugestaltung – wir setzen Ihre Wünsche professionell und mit höchster
-			Sorgfalt um.
-			Mit jahrelanger Erfahrung und einem engagierten Team bieten wir Ihnen maßgeschneiderte Lösungen für Ihr
-			Zuhause und Ihre Außenanlagen.
-			Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen bei uns an erster Stelle.
-		</p>
-		<p>
-			Lassen Sie uns gemeinsam Ihre Projekte verwirklichen – wir freuen uns auf Ihre Anfrage!
-		</p>
-	</div>
-</header>
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">Nord Haustechnik & Gala Bau</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Ihr zuverlässiger Partner für hochwertige Handwerksleistungen
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="#work" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    Unsere Arbeiten
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    Kontaktieren Sie uns
+                </a>
+            </div>
+        </div>
+    </section>
 
-<style>
-	#header {
-		background-color: #2A679D;
-		/* Farbton aus dem Bild */
-		color: white;
-		/* Weißer Text für besseren Kontrast */
-		text-align: center;
-		/* Zentrierter Text */
-		padding: 50px 20px;
-		/* Innenabstand für bessere Optik */
-		border-radius: 10px;
-		/* Sanfte Ecken für ein modernes Design */
-		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-		/* Leichter Schatten für Tiefe */
-	}
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Willkommen bei Nord Haustechnik & Gala Bau</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Ihr zuverlässiger Partner für hochwertige Handwerksleistungen! Ob Renovierung, Sanierung oder Neugestaltung – wir setzen Ihre Wünsche professionell und mit höchster Sorgfalt um.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Mit jahrelanger Erfahrung und einem engagierten Team bieten wir Ihnen maßgeschneiderte Lösungen für Ihr Zuhause und Ihre Außenanlagen. Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen bei uns an erster Stelle.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Lassen Sie uns gemeinsam Ihre Projekte verwirklichen – wir freuen uns auf Ihre Anfrage!
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <img src="http://static.photos/construction/640x360/1" alt="Handwerksleistungen" class="rounded-lg shadow-lg">
+                    <img src="http://static.photos/construction/640x360/2" alt="Bauarbeiten" class="rounded-lg shadow-lg mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
 
-	.welcome-text {
-		max-width: 800px;
-		/* Begrenzte Breite für bessere Lesbarkeit */
-		margin: auto;
-		/* Zentriert das Div in der Mitte */
-	}
+    <!-- Gallery Section -->
+    <section id="work" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Unsere Arbeit in Bildern</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+                    Wir setzen auf Qualität und Präzision. Hier sehen Sie einige unserer Projekte – überzeugen Sie sich selbst von unserer Handwerkskunst!
+                </p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Gallery items -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/4.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/2.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/3.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/31.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/14.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/6.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/7.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/15.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                    <img src="images/9.JPG" alt="" class="w-full h-64 object-cover">
+                </div>
+                <!-- Additional gallery items hidden initially -->
+                <div id="additional-images" class="col-span-full hidden">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/10.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/11.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/12.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/13.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/5.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/8.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/16.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/17.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/18.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/19.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/20.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/21.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/22.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/23.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/24.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/25.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/26.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/27.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/28.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/29.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/30.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/1.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/32.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/33.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/34.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/35.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/36.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/37.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/38.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/39.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/40.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg shadow-md" data-aos="fade-up">
+                            <img src="images/41.JPG" alt="" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    Mehr anzeigen
+                </button>
+            </div>
+        </div>
+    </section>
 
-	h1 {
-		font-size: 2.0em;
-		/* Größere Überschrift */
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kontakt</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="contact-card rounded-2xl p-8 text-white" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Nord Haustechnik & Gala Bau</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-feather="user" class="mr-4 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Geschäftsführer</p>
+                                <p>Faruk Cakmak</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="map-pin" class="mr-4 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Adresse</p>
+                                <p>Kapellen Str. 65, 22117 Hamburg</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="mail" class="mr-4 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">E-Mail</p>
+                                <p><a href="mailto:nordhaustechnik.12@gmail.com" class="hover:underline">nordhaustechnik.12@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="phone" class="mr-4 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Telefon</p>
+                                <p><a href="tel:+491717091205" class="hover:underline">+49 171 7091205</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Nachricht</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Nachricht senden
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		color: white;
-	}
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-lg mb-4">© 2025 Nord Haustechnik & Gala Bau. Alle Rechte vorbehalten.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-	p {
-		font-size: 1.0em;
-		line-height: 1.6;
-		/* Bessere Lesbarkeit */
-		margin-top: 20px;
-		margin-bottom: 15px;
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-
-	/* Responsive Anpassungen für Handys */
-	@media screen and (max-width: 768px) {
-		#header {
-			padding-top: 15px;
-			padding-bottom: 10px;
-			/* Weniger Padding auf kleinen Bildschirmen */
-		}
-
-		#nav {
-			margin-top: -10;
-		}
-
-		.welcome-text {
-			max-width: 90%;
-			/* Fast volle Breite auf Mobilgeräten */
-			padding: 0 15px;
-			/* Weniger Innenabstand */
-		}
-
-
-
-		h1 {
-			font-size: 1.2em;
-			/* Kleinere Überschrift */
-		}
-
-		p {
-			font-size: 0.9em;
-			/* Kleinere Schrift für Mobilgeräte */
-			margin-left: 10px;
-			margin-right: 10px;
-		}
-
-
-	}
-</style>
-
-
-<body class="is-preload">
-
-	<!-- Wrapper-->
-	<div id="wrapper">
-
-		<!-- Nav -->
-		<nav id="nav">
-			<a href="#" class="icon solid fa-home"><span>Home</span></a>
-			<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Me -->
-			<article id="home" class="panel intro">
-				<header style="display: flex; align-items: center;">
-					<img src="images/me.jpg" alt="" style="width: 50%; height: 50%; margin-left: -25px;">
-					<img src="images/dienstleistungen.jpg" alt="" style="width: 60%; height: 60%;">
-				</header>
-
-			</article>
-
-			<!-- Work -->
-			<article id="work" class="panel">
-				<header style="display: flex; align-items: center;">
-					<h2>Unsere Arbeit in Bildern</h2>
-				</header>
-				<p>
-					Wir setzen auf Qualität und Präzision. Hier sehen Sie einige unserer Projekte –
-					überzeugen Sie sich selbst von unserer Handwerkskunst!
-				</p>
-				<section>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/4.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/2.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/3.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/31.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/14.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/6.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/7.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/15.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/9.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/10.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/11.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/12.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/13.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/5.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/8.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/16.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/17.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/18.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/19.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/20.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/21.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/22.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/23.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/24.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/25.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/26.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/27.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/28.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/29.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/30.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/1.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/32.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/33.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/34.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/35.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/36.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/37.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/38.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/39.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/40.JPG" alt=""></div>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="image fit"><img src="images/41.JPG" alt=""></div>
-						</div>
-					</div>
-				</section>
-			</article>
-
-			<!-- Contact -->
-			<article id="contact" class="panel">
-				<header style="display: flex; align-items: center;">
-
-				</header>
-
-				<div>
-					<a class="image fit"><img src="images/kontakt3.jpg" alt=""></a>
-				</div>
-				</form>
-			</article>
-
-		</div>
-
-		<!--  -->
-		<!-- Footer -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        feather.replace();
 
 
-	</div>
+        // Load more images functionality with animations
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const additionalImages = document.getElementById('additional-images');
+        if (loadMoreBtn && additionalImages) {
+            loadMoreBtn.addEventListener('click', function() {
+                if (additionalImages.classList.contains('hidden')) {
+                    additionalImages.classList.remove('hidden');
+                    // Animate newly revealed items
+                    const newItems = additionalImages.querySelectorAll('.gallery-item');
+                    newItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, index * 100);
+                    });
+                    loadMoreBtn.textContent = 'Weniger anzeigen';
+                } else {
+                    additionalImages.classList.add('hidden');
+                    loadMoreBtn.textContent = 'Mehr anzeigen';
+                }
+            });
+        }
 
-	<footer
-		style="background-color: #f4f4f4; padding: 20px 0; text-align: center; font-family: Arial, sans-serif; color: #333;">
-		<div>
-			<p style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Nord Haustechnik & Gala Bau</p>
-			<p style="font-size: 14px; margin: 5px 0;">Geschäftsführer: Faruk Cakmak</p>
-			<p style="font-size: 14px; margin: 5px 0;">Adresse: Kapellen Str. 65, 22117 Hamburg</p>
-			<p style="font-size: 14px; margin: 5px 0;">
-				E-Mail:
-				<a href="mailto:nordhaustechnik.12@gmail.com" style="color: #007BFF; text-decoration: none;">
-					nordhaustechnik.12@gmail.com
-				</a>
-			</p>
-			<p style="font-size: 14px; margin: 5px 0;">
-				Telefon:
-				<a href="tel:+491717091205" style="color: #007BFF; text-decoration: none;">
-					+49 171 7091205
-				</a>
-			</p>
-		</div>
-		<div style="margin-top: 15px; font-size: 12px; color: #777;">
-			© 2025 Nord Haustechnik & Gala Bau. Alle Rechte vorbehalten.
-		</div>
-	</footer>
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+        // Animate all gallery items simultaneously when they come into view
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
 
+        galleryItems.forEach(item => {
+            observer.observe(item);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
 </body>
-
 </html>
