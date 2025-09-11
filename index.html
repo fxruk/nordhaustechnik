@@ -140,7 +140,7 @@
                 <!-- Gallery items -->
                 <div class="gallery-item overflow-hidden rounded-lg shadow-md">
                     <img src="images/4.JPG" alt="" class="w-full h-64 object-cover">
-                </div>
+                </div> 
                 <div class="gallery-item overflow-hidden rounded-lg shadow-md">
                     <img src="images/2.JPG" alt="" class="w-full h-64 object-cover">
                 </div>
@@ -253,9 +253,6 @@
                             <img src="images/37.JPG" alt="" class="w-full h-64 object-cover">
                         </div>
                         <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                            <img src="images/38.JPG" alt="" class="w-full h-64 object-cover">
-                        </div>
-                        <div class="gallery-item overflow-hidden rounded-lg shadow-md">
                             <img src="images/39.JPG" alt="" class="w-full h-64 object-cover">
                         </div>
                         <div class="gallery-item overflow-hidden rounded-lg shadow-md">
@@ -343,18 +340,7 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <p class="text-lg mb-4">© 2025 Nord Haustechnik & Gala Bau. Alle Rechte vorbehalten.</p>
-                <div class="flex justify-center space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i data-feather="facebook"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i data-feather="instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i data-feather="linkedin"></i>
-                    </a>
-                </div>
+                <p class="text-lg">© 2025 Nord Haustechnik & Gala Bau. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
@@ -388,6 +374,28 @@
                     additionalImages.classList.add('hidden');
                     loadMoreBtn.textContent = 'Mehr anzeigen';
                 }
+            });
+        }
+
+        // Form submission handling
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Create mailto link with pre-filled data
+                const subject = encodeURIComponent('Kontaktanfrage von Website');
+                const body = encodeURIComponent(`Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`);
+                const mailtoLink = `mailto:nordhaustechnik.12@gmail.com?subject=${subject}&body=${body}`;
+                
+                // Open default email client
+                window.location.href = mailtoLink;
+                
+              
             });
         }
 
